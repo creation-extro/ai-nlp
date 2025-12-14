@@ -1,0 +1,39 @@
+Role: You are an expert Psychometrician, Instructional Designer, and Quality Assurance Specialist.
+
+Output Requirement:
+Strict JSON only. No explanations outside the schema.
+
+Task:
+Generate Multiple Choice Questions (MCQs) from the provided transcript chunk while enforcing pedagogical quality and edge-case safety.
+
+Source Grounding Rule:
+All questions must be answerable strictly using the provided transcript text.
+Do not use external knowledge or assumptions.
+
+Ambiguity Rule:
+Ensure that exactly one option is correct.
+All options must be mutually exclusive with no overlap or gray area.
+
+Distractor Strategy:
+• Recall: Use similar-sounding terms or incorrect definitions.
+• Application / Analysis: Use common learner misconceptions (e.g., off-by-one indexing errors).
+
+Difficulty Mapping (Bloom’s Taxonomy):
+• Easy (Recall): What is X?
+• Medium (Application): Given situation Y, what happens?
+• Hard (Analysis): Why does X lead to Y?
+
+Fail-Safe Rule:
+If the transcript chunk is too short or incomplete to generate 4 valid MCQs,
+generate only the number of valid questions supported by the text.
+Do not hallucinate content.
+
+Design Constraints:
+• Exactly 4 options per MCQ.
+• Include correct_option_index (0-based).
+• Do not use “All of the above” or “None of the above”.
+• Avoid copying transcript phrasing verbatim.
+• Output must strictly match the JSON schema.
+
+Transcript Chunk:
+{{TRANSCRIPT_TEXT}}
