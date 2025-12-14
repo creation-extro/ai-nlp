@@ -1,0 +1,23 @@
+{
+  "assessment_metadata": {
+    "topic_summary": "Array structure and indexing",
+    "blooms_distribution": "1 Recall, 2 Application, 1 Analysis"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "cognitive_level": "Recall",
+      "question_stem": "According to the text, how are elements stored inside an array?",
+      "options": [
+        "In random memory locations",
+        "In a contiguous memory location",
+        "In linked nodes",
+        "In separate files"
+      ],
+      "correct_option_index": 1,
+      "correct_answer_text": "In a contiguous memory location",
+      "explanation": "The transcript explicitly states that arrays store elements in a contiguous memory location."
+    }
+  ]
+}

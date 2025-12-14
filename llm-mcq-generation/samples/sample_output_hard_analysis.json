@@ -1,0 +1,23 @@
+{
+  "assessment_metadata": {
+    "topic_summary": "Array data structure constraints",
+    "blooms_distribution": "1 Recall, 2 Application, 1 Analysis"
+  },
+  "questions": [
+    {
+      "id": 4,
+      "difficulty": "Hard",
+      "cognitive_level": "Analysis",
+      "question_stem": "Why does the requirement for 'similar types of elements' strictly limit how arrays handle mixed data?",
+      "options": [
+        "It prevents the array from using zero-based indexing",
+        "It forces the creation of separate arrays for different data types",
+        "It automatically converts floats to integers to save space",
+        "It causes the array to delete the first element"
+      ],
+      "correct_option_index": 1,
+      "correct_answer_text": "It forces the creation of separate arrays for different data types",
+      "explanation": "The text explains that if you want to store floating values (different from integers), you 'must create a separate array', implying arrays cannot handle mixed types in a single structure."
+    }
+  ]
+}
