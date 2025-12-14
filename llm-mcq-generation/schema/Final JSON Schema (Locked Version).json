@@ -1,0 +1,43 @@
+{
+  "name": "mcq_assessment",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "assessment_metadata": {
+        "type": "object",
+        "properties": {
+          "topic_summary": { "type": "string" },
+          "blooms_distribution": { "type": "string" }
+        },
+        "required": ["topic_summary", "blooms_distribution"],
+        "additionalProperties": false
+      },
+      "questions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "integer" },
+            "difficulty": { "type": "string", "enum": ["Easy", "Medium", "Hard"] },
+            "cognitive_level": { "type": "string", "enum": ["Recall", "Application", "Analysis"] },
+            "question_stem": { "type": "string" },
+            "options": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "correct_option_index": { "type": "integer", "description": "0-based index of the correct answer" },
+            "correct_answer_text": { "type": "string" },
+            "explanation": { "type": "string" }
+          },
+          "required": ["id", "difficulty", "cognitive_level", "question_stem", "options", "correct_option_index", "correct_answer_text", "explanation"],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": ["assessment_metadata", "questions"],
+    "additionalProperties": false
+  }
+}
