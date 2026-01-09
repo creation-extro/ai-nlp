@@ -1,0 +1,34 @@
+# Environment variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# ML / Whisper
+*.mp3
+*.wav
+*.pt
+*.bin
+*.onnx
+temp_audio.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

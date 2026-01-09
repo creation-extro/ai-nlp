@@ -1,0 +1,6 @@
+openai-whisper
+whisper-timestamped
+moviepy
+spacy
+pymongo
+pydantic
